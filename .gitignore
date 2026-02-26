@@ -1,0 +1,19 @@
+# Ambientes virtuais
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Dados
+data/raw/*
+data/processed/*
+
+# Jupyter
+.ipynb_checkpoints/
+
+
+# Sistema
+desktop.ini
+Thumbs.db
