@@ -5,14 +5,14 @@ def recommendation_system(title: str, df: pd.DataFrame, similaridades: np.ndarra
     """
     Retorna uma lista com os 5 títulos mais semelhantes ao título fornecido.
 
-    param title: Título da obra de interesse.
-    param df: Dados vetorizados.
-    param similaridades: Distâncias entre os vetores de cada título registrado nos dados.
-    return: Lista com os 5 títulos mais semelhantes ao fornecido.
+    :param title: Título da obra de interesse.
+    :param df: Dados vetorizados.
+    :param similaridades: Distâncias entre os vetores de cada título registrado nos dados.
+    :return: Lista com os 5 títulos mais semelhantes ao fornecido.
     """
 
     if title not in df['title'].values:
-        return "Título não encontrado."
+        return ["Título não encontrado."]
 
     # Obtém o índice do título passado como argumento
     index = df[df['title'] == title].index[0]
