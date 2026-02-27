@@ -1,4 +1,15 @@
-def recommendation_system(title, df, similaridades):
+import pandas as pd
+import numpy as np
+
+def recommendation_system(title: str, df: pd.DataFrame, similaridades: np.ndarray):
+    """
+    Retorna uma lista com os 5 títulos mais semelhantes ao título fornecido.
+
+    param title: Título da obra de interesse.
+    param df: Dados vetorizados.
+    param similaridades: Distâncias entre os vetores de cada título registrado nos dados.
+    return: Lista com os 5 títulos mais semelhantes ao fornecido.
+    """
 
     if title not in df['title'].values:
         return "Título não encontrado."

@@ -7,13 +7,27 @@ from nltk.corpus import stopwords
 ps = PorterStemmer()
 stop_words = set(stopwords.words('english'))
 
-def custom_analyzer(text):
+def custom_analyzer(text: list):
+    """
+    Remove as stop words e faz o stemming de cada palavra
+
+    param text: Lista com conjunto de informações agrupadas de um título.
+    return: Lista com conjunto de informações agrupadas de um título,
+    porém sem as stop words e tratadas pelo stemming.
+    """
     tokens = text.split()
     tokens = [word for word in tokens if word not in stop_words]
     tokens = [ps.stem(word) for word in tokens]
     return tokens
 
-def generate_similarity_matrix(path_to_data):
+def generate_similarity_matrix(path_to_data: str):
+    """
+    Lê os dados processados, transforma as tags em vetores numéricos e 
+    calcula a matriz de similaridade entre os títulos.
+
+    param path_to_data: Caminho (string) para o arquivo CSV contendo os dados.
+    return: Tupla contendo o DataFrame original e a matriz de similaridade.
+    """
 
     df = pd.read_csv(path_to_data)
 
