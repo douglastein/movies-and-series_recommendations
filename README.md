@@ -23,7 +23,7 @@ Os dados se encontram em [Kaggle](https://www.kaggle.com/datasets/shivamb/netfli
 ## Como Executar
 1. Clone o repositório:
 
-git clone <url>
+git clone <https://github.com/douglastein/movies-and-series_recommendations>
 
 2. Crie e ative um ambiente virtual:
 
